@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/auth/components/custom_text_field.dart';
+import 'package:greengrocer/src/auth/sing_up_screen.dart';
 import 'package:greengrocer/src/config/customs_color.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -151,7 +152,12 @@ class SignInScreen extends StatelessWidget {
                                   width: 2, color: Colors.green),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .push(MaterialPageRoute(builder: (c) {
+                              return SingUpScreen();
+                            }));
+                          },
                           child: const Text(
                             'Criar conta',
                             style: TextStyle(fontSize: 18),
