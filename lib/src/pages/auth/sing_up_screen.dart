@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/auth/components/custom_text_field.dart';
 import 'package:greengrocer/src/config/customs_color.dart';
+import 'package:greengrocer/src/pages/auth/components/custom_text_field.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class SingUpScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class SingUpScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: CustomsColor.customSwatchColor,
+      backgroundColor: CustomColors.customSwatchColor,
       body: SingleChildScrollView(
         child: SizedBox(
           height: size.height,

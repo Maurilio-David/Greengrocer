@@ -1,8 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/auth/components/custom_text_field.dart';
-import 'package:greengrocer/src/auth/sing_up_screen.dart';
 import 'package:greengrocer/src/config/customs_color.dart';
+import 'package:greengrocer/src/pages/auth/components/custom_text_field.dart';
+import 'package:greengrocer/src/pages/auth/sing_up_screen.dart';
+import 'package:greengrocer/src/pages/base/base_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class SignInScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: CustomsColor.customSwatchColor,
+      backgroundColor: CustomColors.customSwatchColor,
       body: SingleChildScrollView(
         child: SizedBox(
           height: size.height,
@@ -39,7 +40,7 @@ class SignInScreen extends StatelessWidget {
                         TextSpan(
                           text: 'grocer',
                           style: TextStyle(
-                            color: CustomsColor.customContrastColor,
+                            color: CustomColors.customContrastColor,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -98,7 +99,12 @@ class SignInScreen extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .push(MaterialPageRoute(builder: (c) {
+                              return BaseScreen();
+                            }));
+                          },
                           child: const Text(
                             'Entrar',
                             style: TextStyle(fontSize: 18),
@@ -114,7 +120,7 @@ class SignInScreen extends StatelessWidget {
                             child: Text(
                               'Esqueceu a senha?',
                               style: TextStyle(
-                                  color: CustomsColor.customContrastColor),
+                                  color: CustomColors.customContrastColor),
                             )),
                       ),
 
