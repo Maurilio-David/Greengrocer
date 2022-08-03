@@ -20,6 +20,7 @@ class _HomeTabState extends State<HomeTab> {
     return Scaffold(
       //Appbar
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,

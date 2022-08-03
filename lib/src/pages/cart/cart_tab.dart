@@ -35,7 +35,7 @@ class _CartTabState extends State<CartTab> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Carrinho'),
-        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
